@@ -1,3 +1,5 @@
+require 'pp'
+
 forecast = [
   {
     "day"=>"Monday",
@@ -205,5 +207,22 @@ forecast = [
 ]
 
 #----- Put your code below here -----
+# daily temps into array, then min / max for that day
+# assign a day variable of min / max to high/low temp keep comparing that temp in each do
+# high = ""
+# low = ""
+#
+# forecast[0]["temperatures"].each do |time, temp|
+#   high = temp if high < temp
+# end
+#
+# p high
 
+
+forecast.each do |forecast|
+  p "#{forecast["day"]}: High of #{forecast["temperatures"].values.max}, Low of #{forecast["temperatures"].values.min}"
+end
+
+
+# "Monday: High of 72, Low of 52"
 # http://www.ruby-doc.org/core-2.1.5/Hash.html#method-i-values

@@ -18,3 +18,7 @@ forecast = {
 }
 
 #----- Put your code below here -----
+
+forecast.each do |day, temp|
+  p "#{day}: High of #{temp.sort.last}, Low of #{temp.sort.first}"
+end
